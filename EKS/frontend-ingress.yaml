@@ -2,18 +2,17 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: "frontend-ingress"
-  namespace: default
+  labels:
+    app.kubernetes.io/name: external-ingress
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    # alb.ingress.kubernetes.io/group.name: node
-    # alb.ingress.kubernetes.io/group.order: '3'
 spec:
   rules:
     - http:
         paths:
-          - path: /*
+          - path: /
             pathType: Prefix
             backend:
               service:
