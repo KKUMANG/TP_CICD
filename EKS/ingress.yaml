@@ -13,7 +13,7 @@ metadata:
     alb.ingress.kubernetes.io/group.order: '2'
     # SSL Settings
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:111122223333:certificate/11fceb32-9cc2-4b45-934f-c8903e4f9e12
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:248437926296:certificate/66c66bea-d8cd-4b99-956a-4400c1ffbc09
     alb.ingress.kubernetes.io/ssl-redirect: '443'
 spec:
   rules:
