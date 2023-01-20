@@ -16,7 +16,7 @@ spec:
       spec:
         containers:
           - name: demo-frontend
-            image: 248437926296.dkr.ecr.ap-northeast-2.amazonaws.com/clover:d7e23b2c
+            image: 248437926296.dkr.ecr.ap-northeast-2.amazonaws.com/AWS_ECR_URI
             imagePullPolicy: Always
             ports:
               - containerPort: 80
