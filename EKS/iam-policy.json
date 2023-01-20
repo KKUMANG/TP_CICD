@@ -3,9 +3,7 @@
     "Statement": [
         {
             "Effect": "Allow",
-            "Action": [
-                "iam:CreateServiceLinkedRole"
-            ],
+            "Action": "iam:CreateServiceLinkedRole",
             "Resource": "*",
             "Condition": {
                 "StringEquals": {
