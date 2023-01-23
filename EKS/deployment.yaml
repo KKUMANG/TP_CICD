@@ -2,21 +2,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-frontend
+  name: clover-stock
   namespace: default
 spec:
     replicas: 3
     selector:
       matchLabels:
-        app: demo-frontend
+        app: clover-stock
     template:
       metadata:
         labels:
-          app: demo-frontend
+          app: clover-stock
       spec:
         containers:
-          - name: demo-frontend
+          - name: clover-stock
             image: AWS_ECR_URI
             imagePullPolicy: Always
             ports:
               - containerPort: 80
+            resources:
+              requests:
+                cpu: 10m
+              limits:
+                cpu: 50m
+            
+            

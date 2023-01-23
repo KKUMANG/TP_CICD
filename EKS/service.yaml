@@ -2,12 +2,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-frontend
+  name: clover-stock
   annotations:
     alb.ingress.kubernetes.io/healthcheck-path: "/"
 spec:
   selector:
-    app: demo-frontend
+    app: clover-stock
   type: NodePort
   ports:
     - protocol: TCP
